@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class FunctionTypes {
+
+    // 1. Without arguments and without return value
+    void sum1() {
+        int a = 5, b = 10;
+        int sum = a + b;
+        System.out.println("Sum  " + sum);
+    }
+
+    // 2. Without arguments but with return value
+    int sum2() {
+        int a = 7, b = 3;
+        return a + b;
+    }
+
+    // 3. With arguments but without return value
+    void sum3(int a, int b) {
+        int sum = a + b;
+        System.out.println("Sum = " + sum);
+    }
+
+    // 4. With arguments and with return value
+    int sum4(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        FunctionTypes obj = new FunctionTypes();
+
+        // 1
+        obj.sum1();
+
+        // 2
+        int result2 = obj.sum2();
+        System.out.println("Sum = " + result2);
+
+        // 3
+        obj.sum3(8, 12);
+
+        // 4
+        int result4 = obj.sum4(20, 30);
+        System.out.println("Sum = " + result4);
+    }
+}
