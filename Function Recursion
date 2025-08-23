@@ -1,0 +1,28 @@
+//print n natural number and sum of n natural numbers
+public class Methods {
+   public static void main(String[] args){
+   System.out.println("Print n natural numbers :");
+   num(10);
+   sum(10);
+       }
+
+  public static void num(int n){
+     //Base case
+      if(n==1){
+      System.out.println(n);
+      }
+  //Recursive case
+  else{
+      System.out.println(n);
+      num(n-1);
+  }
+ }
+ 
+ public static void sum(int n){
+     int sum=0;
+     for(int i=0;i<=n;i++){
+     sum+=i;
+    }
+    System.out.println("Sum of n natural numbers is "+sum);
+  }
+}
