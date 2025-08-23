@@ -1,0 +1,42 @@
+class AppForm {
+    String name ; 
+    int rollno ;
+
+    public void display() {
+        System.out.println(name);
+        System.out.println(rollno);
+   
+}
+    public static void main(String[] args) {
+        AppForm n = new AppForm();
+        n.name="kabi";
+        n.rollno=78;
+        n.display();  
+    }
+ }
+
+
+
+//Other method of the same code
+
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        AppForm n = new AppForm();
+//if we change the name as kabilannlet use ---> n.name="kabilan";
+        n.display();  
+    }
+}
+
+class AppForm {
+    String name = "kabi";  
+    int rollno = 78;
+
+    public void display() {
+        System.out.println(name);
+        System.out.println(rollno);
+    }
+}
+
