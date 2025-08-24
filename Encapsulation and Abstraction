@@ -1,0 +1,40 @@
+//Encapsulation means collecting the related information and methods and data under same name or class
+
+//Abstraction means hidding the unnecessary. data from the user
+
+class AppForm {
+    String name; 
+    private int rollno;  // private variable
+
+    public void display() {
+        System.out.println(name);
+        System.out.println(rollno);
+    }
+
+    public void setvalues(String str, int num) {
+        name = str;
+        rollno = num;
+    }
+
+    public String getvalues() {
+        return name;  // returns only name
+    }
+}
+
+// Separate main class
+public class Main {
+    public static void main(String[] args) {
+        AppForm n = new AppForm();
+        n.setvalues("kabi", 78);
+        n.display();
+        System.out.println(n.name);  // works (name is not private)
+        
+        
+       // System.out.println(n.rollno);  "_______Abstraction_______"
+        AppForm m = new AppForm();
+        m.setvalues("muhi", 85);
+        m.display();
+        String s1 = m.getvalues();
+        System.out.println(s1);
+    }
+}
