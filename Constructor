@@ -1,0 +1,16 @@
+class Sample {
+    int rollno;
+    int marks;
+    
+    Sample(int num,int mark) {
+        System.out.println("This is default constructor");
+        rollno = num;
+        marks = mark;
+    }
+
+    public static void main(String[] args) {
+        Sample s = new Sample(78,33);   // Create object
+        System.out.println(s.rollno);
+        System.out.println(s.marks);
+    }
+}
