@@ -26,13 +26,20 @@ public class Main {
     public static void main(String[] args) {
         AppForm n = new AppForm();
 //if we change the name as kabilannlet use ---> n.name="kabilan";
-        n.display();  
+    n.name = "kabi";  
+    n.rollno = 78;
+        n.display(); 
+ System.out.println();
+        AppForm m=new AppForm();
+        m.name="muhi";
+        m.rollno=11;
+        m.display();
     }
 }
 
 class AppForm {
-    String name = "kabi";  
-    int rollno = 78;
+    String name;  
+    int rollno;
 
     public void display() {
         System.out.println(name);
