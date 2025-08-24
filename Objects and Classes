@@ -31,8 +31,7 @@ public class Main {
         n.display(); 
  System.out.println();
         AppForm m=new AppForm();
-        m.name="muhi";
-        m.rollno=11;
+        m.setvalues("muhi",11);
         m.display();
     }
 }
@@ -45,5 +44,10 @@ class AppForm {
         System.out.println(name);
         System.out.println(rollno);
     }
+     public void setvalues(String str,int roll){
+    name=str;
+    rollno=roll;
+         
+     }
 }
 
