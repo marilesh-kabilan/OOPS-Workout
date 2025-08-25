@@ -1,0 +1,55 @@
+public class Main{
+public static void main(String[] args) {
+        Animal obj = new Animal();
+        System.out.println(obj.noofleg);
+        obj.eat();
+        obj.walk();
+        
+        Dog d = new Dog();
+        System.out.println("Dog legs: " + d.noofleg);
+        System.out.println("Can dog bark? " + d.canbark);
+        d.eat();
+        d.walk();
+        
+        Cat c = new Cat();
+        System.out.println("Cat legs: " + c.noofleg);
+        System.out.println("Can cat meow? " + c.meow);
+        d.eat();
+        d.walk();
+    }
+}
+
+class Animal {
+    int noofleg = 4;
+
+    public void eat() {
+        System.out.println("I am eating");
+    }
+
+    public void walk() {
+        System.out.println("I am walking");
+    }
+}
+    class Dog extends Animal {
+    Boolean canbark = true;
+}
+
+  class Cat extends Animal {
+    Boolean meow = true;
+}
+
+/*
+_________________________________________________________________________________
+class Animal{
+    public void eat() {
+        System.out.println("I am eating");
+    }
+ 
+Boolean canbark = true;
+
+    public void walk() {
+        System.out.println("I am walking");
+    }
+}
+_________________________________________________________________________________
+*/
