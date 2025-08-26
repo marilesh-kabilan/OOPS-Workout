@@ -14,8 +14,8 @@ public static void main(String[] args) {
         Cat c = new Cat();
         System.out.println("Cat legs: " + c.noofleg);
         System.out.println("Can cat meow? " + c.meow);
-        d.eat();
-        d.walk();
+        c.eat();
+        c.walk();
     }
 }
 
