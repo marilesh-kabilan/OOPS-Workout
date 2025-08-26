@@ -1,0 +1,41 @@
+public class Main{
+public static void main(String[] args) {
+        Animal obj = new Animal();
+        System.out.println(obj.noofleg);
+        obj.eat();
+        obj.walk();
+        
+        Dog d = new Dog();
+        System.out.println("Dog legs: " + d.noofleg);
+        System.out.println("Can dog bark? " + d.canbark);
+        d.eat();
+        d.walk();
+        
+    }
+}
+
+class Animal {
+    int noofleg = 4;
+
+    public void eat() {
+        System.out.println("I am eating");
+    }
+
+    public void walk() {
+        System.out.println("I am walking");
+    }
+}
+  class Dog extends Animal {
+    Boolean canbark = true;
+    int noofleg=5;
+   
+
+
+//Method ____________________________________________________Overriding
+
+
+   
+    public void eat(){
+        System.out.println("Dog is Eating");
+    }
+}
