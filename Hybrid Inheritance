@@ -1,0 +1,45 @@
+//Hybrid Inheritance
+
+class Inheritance{
+    public static void main(String[] args){
+   
+    Son S=new Son();
+    System.out.println(S.g);
+    S.print();
+    
+   Daughter D=new Daughter();
+    System.out.println(D.g);
+    D.print();
+    
+    GrandDaughter G=new GrandDaughter();
+    System.out.println(G.g);
+    G.print();
+    
+    GrandGrandDaughter GD=new GrandGrandDaughter();
+    System.out.println(GD.g);
+    GD.print();
+  }
+}
+class  Father{
+    char g='M';
+    void print(){
+        System.out.println("Parent Class");
+    }
+}
+
+class Son extends Father{
+    
+}
+class Daughter extends Father{
+   char g='F';
+}
+class GrandDaughter extends Daughter{
+     void print(){
+         System.out.println("GrandDaughter");
+     }
+}
+class GrandGrandDaughter extends GrandDaughter{
+     void print(){
+         System.out.println("GrandGrandDaughter");
+     }
+}
