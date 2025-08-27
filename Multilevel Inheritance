@@ -1,0 +1,25 @@
+//Multilevel Inheritance
+
+class Inheritance{
+    public static void main(String[] args){
+    Mother f=new Mother();
+    System.out.println(f.g);
+    f.print();
+    Son s=new Son();
+    System.out.println(s.g);
+    s.print();
+  }
+}
+class  GrandFather{
+    char g='M';
+    void print(){
+        System.out.println("Parent Class");
+    }
+}
+
+class Mother extends GrandFather{
+    char g='F';
+}
+class Son extends Mother{
+   char g='M';  //else this method should extends Grandfather
+}
