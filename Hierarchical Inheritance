@@ -1,0 +1,26 @@
+//Hierarchical Inheritance
+
+class Inheritance{
+    public static void main(String[] args){
+    Mother m=new Mother();
+    System.out.println(m.g);
+    m.print();
+    
+    Uncle u=new Uncle();
+    System.out.println(u.g);
+    u.print();
+  }
+}
+class  GrandFather{
+    char g='M';
+    void print(){
+        System.out.println("Parent Class");
+    }
+}
+
+class Mother extends GrandFather{
+    char g='F';
+}
+class Uncle extends GrandFather{
+   
+}
