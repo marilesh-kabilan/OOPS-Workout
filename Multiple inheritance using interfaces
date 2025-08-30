@@ -1,0 +1,25 @@
+interface Father {
+    abstract void call();
+    abstract void yeah();
+     public static void main(String[] args) {
+        son o = new son();
+        o.call();
+        o.yeah();
+}
+}
+interface Mother{
+    abstract void call();
+    abstract void yeah();
+    
+}
+class son implements Father,Mother {
+    public void call() {
+        System.out.println("hiii");
+    }
+
+    public void yeah() {
+        System.out.println("hello");
+    }
+  
+}
+
