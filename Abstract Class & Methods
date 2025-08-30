@@ -1,0 +1,31 @@
+abstract class Computer {           //Abstract Class
+    abstract void turnoff();       //Abstract method
+     abstract void turnon();
+}
+class HP extends Computer {
+    void turnon(){
+        System.out.println("HP Computer is turned on");
+    }
+    void turnoff(){
+        System.out.println("Computer is turned off");
+    }
+}
+class DELL extends Computer {
+    void turnon(){
+        System.out.println("DELL Computer is turned on");
+    }
+     void turnoff(){
+        System.out.println("Computer is turned off");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        HP o = new HP();
+        o.turnon();
+        o.turnoff();
+        DELL c = new DELL();
+        c.turnon();
+        c.turnoff();
+    }
+}
