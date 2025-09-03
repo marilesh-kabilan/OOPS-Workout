@@ -1,0 +1,32 @@
+// Parent class
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+// pInterface
+interface Pet {
+    void play();
+}
+
+// Child class extends Animal and implements Pet
+class Dog extends Animal implements Pet {
+    @Override
+    public void play() {
+        System.out.println("The dog loves to play fetch!");
+    }
+    
+    void bark() {
+        System.out.println("The dog barks: Woof! Woof!");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();   // from Animal class
+        d.play();  // from Pet interface
+        d.bark();  // from Dog class
+    }
+}
