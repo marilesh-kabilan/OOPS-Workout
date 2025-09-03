@@ -1,0 +1,63 @@
+🔹 Abstract Class
+
+Declared with the keyword abstract.
+
+Can have both abstract methods (without body) and concrete methods (with body).
+
+Can have constructors, instance variables, and static methods.
+
+A class can extend only one abstract class (single inheritance).
+
+Used when classes share a common base and some default functionality.
+
+
+✅ Example:
+
+abstract class Animal {
+    abstract void sound();   // abstract method (no body)
+    
+    void sleep() {           // concrete method
+        System.out.println("This animal sleeps.");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+
+---
+
+🔹 Interface
+
+Declared with the keyword interface.
+
+Contains only abstract methods by default (until Java 7).
+
+From Java 8 onwards, can also have default methods and static methods.
+
+Variables in an interface are public, static, and final by default.
+
+A class can implement multiple interfaces (supports multiple inheritance).
+
+Used when classes need to share a contract (rules) but may not share common behavior.
+
+
+✅ Example:
+
+interface Pet {
+    void play(); // abstract method
+}
+
+class Cat implements Pet {
+    @Override
+    public void play() {
+        System.out.println("Cat plays with a ball.");
+    }
+}
+
+
+---
