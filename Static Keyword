@@ -1,0 +1,40 @@
+class Inheritance {
+    public static void main(String[] args) {
+
+Father F = new Father();
+    System.out.println(F.age);
+ Daughter D = new Daughter();
+    D.age = 18;
+
+System.out.println(F.age);
+System.out.println(D.age);
+  }
+}
+
+class Father {
+    static char gender = 'M';   
+    static int age = 50;  
+
+
+
+    /*           
+  Output: If age is declared as static
+  50
+  50
+  18 
+  Output: If age is not declared as static
+  50
+  18
+  18 
+  */
+
+
+  
+    static void print() {
+        System.out.println("This is Father class");
+    }
+}
+
+
+class Daughter extends Father {
+     char gender = 'F';   
