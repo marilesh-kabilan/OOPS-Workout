@@ -2,15 +2,26 @@ class Sample {
     int rollno;
     int marks;
     
-    Sample(int num,int mark) {
+    Sample() {
+
         System.out.println("This is default constructor");
+   
+}
+Sample(int num,int mark)
+{
+        System.out.println("This is parameterized constructor");
         rollno = num;
         marks = mark;
-    }
+}
 
     public static void main(String[] args) {
-        Sample s = new Sample(78,33);   // Create object
+        Sample s = new Sample(78,33);   // Create object for parameterized
         System.out.println(s.rollno);
         System.out.println(s.marks);
+
+        Sample s1 = new Sample();
+        System.out.println(s.rollno);
+        System.out.println(s.marks);   // Create object for default 
+
     }
 }
