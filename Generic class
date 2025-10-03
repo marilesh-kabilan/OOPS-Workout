@@ -1,0 +1,78 @@
+class TwoGen<T, V> {
+    T ob1;
+    V ob2;
+
+    TwoGen(T o1, V o2) {
+        ob1 = o1;
+        ob2 = o2;
+    }
+
+    void showTypes() {
+        System.out.println("Type of T is " + ob1.getClass().getName());
+        System.out.println("Type of V is " + ob2.getClass().getName());
+    }
+
+    T getob1() { return ob1; }
+    V getob2() { return ob2; }
+}
+
+public class MainClass {
+    public static void main(String[] args) {
+        TwoGen<Integer, String> tgObj = new TwoGen<>(88, "Generics");
+        tgObj.showTypes();
+
+        int v = tgObj.getob1();         // auto-unboxing Integer -> int
+        System.out.println("value: " + v);
+
+        String str = tgObj.getob2();
+        System.out.println("value: " + str);
+    }
+}
+
+
+
+
+
+
+
+1. What is auto-unboxing?
+
+In Java, wrapper classes like Integer, Double, Boolean, etc. are objects that wrap primitive values (int, double, boolean).
+
+Auto-unboxing is the automatic conversion that Java does when you assign a wrapper object to a primitive variable.
+
+For example:
+
+Integer a = 10;   // autoboxing: int → Integer
+int b = a;        // auto-unboxing: Integer → int
+
+
+
+2. How it happens in your code
+int v = tgObj.getob1();
+
+
+Here, tgObj.getob1() returns an Integer object (since T = Integer).
+
+Java automatically unboxes that Integer into a primitive int before storing it in v.
+
+
+3. The NullPointerException case
+
+If the Integer object is null, then Java has nothing to unbox. Example:
+
+Integer a = null;
+int b = a;   // 🚨 NullPointerException
+
+
+In your program, if you had created:
+
+TwoGen<Integer, String> tgObj = new TwoGen<>(null, "Generics");
+int v = tgObj.getob1();  // NPE here
+
+
+👉 So the rule is:
+
+Autoboxing: primitive → wrapper (safe even if primitive is 0).
+
+Auto-unboxing: wrapper → primitive (dangerous if wrapper is null → NPE).
