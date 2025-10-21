@@ -1,0 +1,43 @@
+package kabilan;
+import java.net.*;
+import java.io.*;
+
+public class SocketExample {
+    public static void main(String[] args) throws IOException {
+        Socket socket = new Socket("localhost", 9999);
+
+        DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
+        String msg = dataInputStream.readUTF();
+        System.out.println("Server says: " + msg);
+
+        dataInputStream.close();
+        socket.close();
+    }
+}
+
+
+
+
+package kabilan;
+import java.net.*;
+import java.io.*;
+
+	public class ServerSocketExample {
+	    public static void main(String[] args) throws IOException {
+	        ServerSocket serversocket = new ServerSocket(9999);
+	        System.out.println("Server started. Waiting for client...");
+
+	        Socket socket = serversocket.accept();
+	        System.out.println("Client connected!");
+
+	        DataOutputStream dataOutputStream = new DataOutputStream(socket.getOutputStream());
+	        dataOutputStream.writeUTF("Hi client!");
+
+	        dataOutputStream.close();
+	        socket.close();
+	        serversocket.close();
+	        System.out.println("Server closed.");
+	    }
+	}
+
+
